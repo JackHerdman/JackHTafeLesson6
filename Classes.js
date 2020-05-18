@@ -18,8 +18,8 @@ class Person {
     }
 }
 
-let me = new Person(); //creates an blank object called me using what is in Person
-let you = new Person("Luke", "Parker", 30); // creates an object using the parameters from the constructor
+let me = new Person(); //creates an blank instance called me using what is in Person
+let you = new Person("Luke", "Parker", 30); // creates an instance using the parameters from the constructor
 me.name = "jack";
 me.age = 29;
 me.favouriteFood = "Pizza";

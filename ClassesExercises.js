@@ -9,8 +9,7 @@ class Pet2 {
     ownerId;
 }
 //3. Create a constructor that assigns the 3 properties above
-
-class Pet {
+class Pet3 {
     constructor(givenName, age, ownerId) {
         this.givenName = givenName;
         this.age = age;
@@ -18,13 +17,13 @@ class Pet {
     }
 }
 //4. Create a class called Owner with 3 properties: givenName, familyName and id
-class Owner1 {
+class Owner4 {
     givenName;
     familyName;
     id;
 }
 //5. Create a constructor for the Owner class that assigns the values above.
-class Owner2 {
+class Owner5 {
     constructor(givenName, familyName, id) {
         this.givenName = givenName;
         this.familyName = familyName;
@@ -32,7 +31,7 @@ class Owner2 {
     }
 }
 //6. Create a method in the class Owner called getFullName that takes no arguments and returns the full name of the owner
-class Owner {
+class Owner6 {
     constructor(givenName, familyName, id) {
         this.givenName = givenName;
         this.familyName = familyName;
@@ -44,6 +43,66 @@ class Owner {
 }
 //7. Create a static method in the class Pet called getOwnerById that takes 2 arguments, the first should be a pet object and the second should be an array of owners. The function should return the full name of the owner with an id matching the ownerId of the pet or else return an error message.
 
+class Pet {
+    constructor(givenName, age, ownerId) {
+        this.givenName = givenName;
+        this.age = age;
+        this.ownerId = ownerId;
+    }
+    static getOwnerById(obj, owner) {
+        if (obj.ownerId == owner.id) {
+            return (owner.getFullName());
+        } else {
+            console.log(`error`);
+        }
+    }
+
+}
+class Owner {
+    constructor(givenName, familyName, id) {
+        this.givenName = givenName;
+        this.familyName = familyName;
+        this.id = id;
+    }
+    getFullName() {
+        return `${this.givenName} ${this.familyName}`
+    }
+}
+
+
 //8. Create a class called Square with a single property, sideLength and create a constructor that assigns that value
+class Square8 {
+    constructor(sideLength) {
+        this.sideLength = sideLength;
+    }
+}
 //9. Create a getter that returns the area of the Square (hint, the area is sideLength * sideLength)
+class Square9 {
+    constructor(sideLength) {
+        this.sideLength = sideLength;
+    }
+
+    get areaSquared() {
+        return this.sideLength * 2;
+
+    }
+}
+
 //10. Create a setter for area that sets the sideLength for the given area (hint, use the Math.sqrt function to retrieve the square root of the area and assign it as the sideLength)
+class Square {
+    constructor(sideLength) {
+        this.sideLength = sideLength;
+    }
+
+    get areaSquared() {
+        return this.sideLength * 2;
+    }
+    set areaSquared(squared){
+        this.sideLength = math.sqrt(squared);
+    }
+}
+
+let room = new Square(20);
+console.log(`${room.sideLength}m`);
+console.log(`${room.areaSquared}m2`);
+console.log(`${room.areaSquared}`);
