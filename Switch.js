@@ -13,3 +13,4 @@ switch(userInput){ //switch uses the parameter to choose an option to execute
         console.log("Your selection was not recognised")
 }
 
+
